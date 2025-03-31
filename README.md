@@ -32,3 +32,9 @@ The Advanced Email Management Application is designed to:
 - **pip** (Python package installer)
 - **Virtual Environment (recommended)**
 
+## Installation
+
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/yourusername/yourrepository.git
+   cd yourrepository
