@@ -10,3 +10,11 @@ The Advanced Email Management Application is designed to:
 - **Categorize Emails:** Automatically classify emails (e.g., Work, Promotional, Finance, General) using simple rule-based logic.
 - **Prioritize Emails:** Determine email priority based on sender information using basic heuristics.
 
+## Features Implemented
+
+### Day 1
+- **Basic Flask API Setup:** 
+  - Initialized a Flask application with a simple structure.
+- **Email Integration:** 
+  - Implemented an endpoint (`/emails`) to fetch email IDs from the INBOX via an IMAP connection.
+  
