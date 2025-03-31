@@ -18,3 +18,11 @@ The Advanced Email Management Application is designed to:
 - **Email Integration:** 
   - Implemented an endpoint (`/emails`) to fetch email IDs from the INBOX via an IMAP connection.
   
+### Day 2
+- **Summarization Endpoint (`/summarize`):**
+  - Uses a Hugging Face transformer model to generate summaries for provided email content.
+- **Categorization Endpoint (`/categorize`):**
+  - Analyzes email content to assign a category using simple keyword-based rules.
+- **Prioritization Endpoint (`/prioritize`):**
+  - Determines email priority based on the sender's address using predefined rules.
+
