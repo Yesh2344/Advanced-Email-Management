@@ -26,3 +26,9 @@ The Advanced Email Management Application is designed to:
 - **Prioritization Endpoint (`/prioritize`):**
   - Determines email priority based on the sender's address using predefined rules.
 
+## Prerequisites
+
+- **Python 3.8+**
+- **pip** (Python package installer)
+- **Virtual Environment (recommended)**
+
