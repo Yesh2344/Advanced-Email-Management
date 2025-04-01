@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Advanced Email Management - Frontend</title>
+  <meta charset="utf-8" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    textarea, input[type="text"] {
+      width: 100%;
+      margin: 5px 0;
+      padding: 8px;
+      font-size: 14px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    .result {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-top: 10px;
+      background-color: #f9f9f9;
+      white-space: pre-wrap;
+    }
+    .container {
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Advanced Email Management Application</h1>
+  
+  <div class="container">
+    <h2>Fetch Emails</h2>
+    <button id="fetchEmailsBtn">Fetch Emails</button>
+    <div id="emailsResult" class="result"></div>
+  </div>
+
+  <div class="container">
+    <h2>Summarize Email</h2>
+    <textarea id="summarizeInput" placeholder="Paste email content here..."></textarea>
+    <br>
+    <button id="summarizeBtn">Summarize</button>
+    <div id="summarizeResult" class="result"></div>
+  </div>
+
+  <div class="container">
+    <h2>Categorize Email</h2>
+    <textarea id="categorizeInput" placeholder="Paste email content here..."></textarea>
+    <br>
+    <button id="categorizeBtn">Categorize</button>
+    <div id="categorizeResult" class="result"></div>
+  </div>
+
+  <div class="container">
+    <h2>Prioritize Email</h2>
+    <input type="text" id="prioritizeInput" placeholder="Enter sender email...">
+    <br><br>
+    <button id="prioritizeBtn">Prioritize</button>
+    <div id="prioritizeResult" class="result"></div>
+  </div>
+
+  <script>
+    // Function to fetch emails from the backend
+    document.getElementById('fetchEmailsBtn').addEventListener('click', () => {
+      fetch('http://127.0.0.1:5000/emails')
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('emailsResult').innerText = JSON.stringify(data, null, 2);
+      })
+      .catch(error => {
+        document.getElementById('emailsResult').innerText = 'Error: ' + error;
+      });
+    });
+
+    // Function to summarize email content
+    document.getElementById('summarizeBtn').addEventListener('click', () => {
+      const content = document.getElementById('summarizeInput').value;
+      fetch('http://127.0.0.1:5000/summarize', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email_content: content })
+      })
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('summarizeResult').innerText = JSON.stringify(data, null, 2);
+      })
+      .catch(error => {
+        document.getElementById('summarizeResult').innerText = 'Error: ' + error;
+      });
+    });
+
+    // Function to categorize email content
+    document.getElementById('categorizeBtn').addEventListener('click', () => {
+      const content = document.getElementById('categorizeInput').value;
+      fetch('http://127.0.0.1:5000/categorize', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email_content: content })
+      })
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('categorizeResult').innerText = JSON.stringify(data, null, 2);
+      })
+      .catch(error => {
+        document.getElementById('categorizeResult').innerText = 'Error: ' + error;
+      });
+    });
+
+    // Function to prioritize email based on sender
+    document.getElementById('prioritizeBtn').addEventListener('click', () => {
+      const sender = document.getElementById('prioritizeInput').value;
+      fetch('http://127.0.0.1:5000/prioritize', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ sender: sender })
+      })
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('prioritizeResult').innerText = JSON.stringify(data, null, 2);
+      })
+      .catch(error => {
+        document.getElementById('prioritizeResult').innerText = 'Error: ' + error;
+      });
+    });
+  </script>
+</body>
+</html>
