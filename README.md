@@ -11,3 +11,11 @@ The Advanced Email Management Application:
 - **Prioritizes Emails:** Determines email priority based on sender information using basic heuristics.
 - **Provides a Frontend:** A simple HTML interface to interact with the backend endpoints.
 
+## Features Implemented
+
+### Day 1
+- **Basic Flask API Setup:**
+  - Created a Flask application with a foundational structure.
+- **Email Integration:**
+  - Implemented an `/emails` endpoint to connect to an IMAP server and fetch email IDs from the INBOX.
+
