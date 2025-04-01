@@ -19,3 +19,11 @@ The Advanced Email Management Application:
 - **Email Integration:**
   - Implemented an `/emails` endpoint to connect to an IMAP server and fetch email IDs from the INBOX.
 
+### Day 2
+- **Summarization Endpoint (`/summarize`):**
+  - Uses a Hugging Face summarization pipeline to generate summaries for provided email content.
+- **Categorization Endpoint (`/categorize`):**
+  - Analyzes email content using rule-based logic to assign categories.
+- **Prioritization Endpoint (`/prioritize`):**
+  - Determines the priority of an email based on sender information.
+
