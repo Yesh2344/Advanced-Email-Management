@@ -27,3 +27,22 @@ The Advanced Email Management Application:
 - **Prioritization Endpoint (`/prioritize`):**
   - Determines the priority of an email based on sender information.
 
+### Day 3
+- **Frontend Integration:**
+  - Developed an `index.html` file that provides a user interface to:
+    - Fetch emails.
+    - Summarize email content.
+    - Categorize email content.
+    - Prioritize emails based on the sender.
+  - The frontend uses JavaScript to interact with the Flask API endpoints.
+  - Addresses potential CORS issues by recommending the use of `flask-cors` on the backend.
+
+## Prerequisites
+
+- **Python 3.8+**
+- **pip** (Python package installer)
+- **Virtual Environment (recommended)**
+- **Gmail Account (or another email service):**
+  - Ensure IMAP is enabled.
+  - Use an app-specific password if using Gmail with 2FA enabled.
+
