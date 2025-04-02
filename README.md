@@ -199,3 +199,29 @@ curl -X POST -H "Content-Type: application/json" -d "{\"email_content\": \"Your 
 curl -X POST -H "Content-Type: application/json" -d "{\"sender\": \"boss@example.com\"}" http://127.0.0.1:5000/prioritize
 ```
 
+## Frontend (index.html)
+
+The provided `index.html` file offers a simple user interface to interact with the backend endpoints:
+
+- **Fetch Emails:** Displays a list of email IDs.
+- **Summarize Email:** Sends email content to generate a summary.
+- **Categorize Email:** Analyzes the email content to assign a category.
+- **Prioritize Email:** Evaluates sender information to determine priority.
+
+**Note:** When serving `index.html` from a different port (e.g., 8000) than your Flask app (port 5000), you may encounter CORS issues. To resolve this, install `flask-cors` and enable CORS in your Flask app:
+
+```python
+from flask_cors import CORS
+app = Flask(__name__)
+CORS(app)
+```
+
+## Future Enhancements
+
+- Expand email parsing to extract additional details (subject, sender, timestamp).
+- Improve the categorization and prioritization logic with advanced ML techniques.
+- Develop a more sophisticated frontend using modern JavaScript frameworks like React or Vue.js.
+- Add authentication and user management.
+- Implement email sending capabilities.
+- Create email thread visualization.
+
