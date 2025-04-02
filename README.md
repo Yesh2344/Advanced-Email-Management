@@ -46,3 +46,25 @@ The Advanced Email Management Application:
   - Ensure IMAP is enabled.
   - Use an app-specific password if using Gmail with 2FA enabled.
 
+## Installation
+
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/yourusername/advanced-email-management.git
+   cd advanced-email-management
+   ```
+
+2. **Create and Activate a Virtual Environment:**
+
+   On Windows:
+   ```bash
+   python -m venv venv
+   venv\Scripts\activate
+   ```
+
+   On macOS/Linux:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate
+   ```
+
