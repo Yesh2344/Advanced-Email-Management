@@ -68,3 +68,39 @@ The Advanced Email Management Application:
    source venv/bin/activate
    ```
 
+3. **Install Dependencies:**
+   
+   Ensure your `requirements.txt` includes:
+   - flask
+   - imapclient
+   - transformers
+   - flask-cors (if you plan to handle CORS issues)
+   - python-dotenv (optional, for .env file handling)
+
+   Then run:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Configure Environment Variables:**
+   
+   You can either set these manually in your command line:
+   ```bash
+   set EMAIL_HOST=imap.gmail.com
+   set EMAIL_USER=youremail@gmail.com
+   set EMAIL_PASS=your_app_specific_password
+   ```
+
+   Or create a `.env` file in your project directory with:
+   ```
+   EMAIL_HOST=imap.gmail.com
+   EMAIL_USER=youremail@gmail.com
+   EMAIL_PASS=your_app_specific_password
+   ```
+
+   And load these variables in your `app.py` using python-dotenv:
+   ```python
+   from dotenv import load_dotenv
+   load_dotenv()
+   ```
+
