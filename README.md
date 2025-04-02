@@ -188,3 +188,10 @@ Determines the email's priority based on the sender.
 }
 ```
 
+## Testing Endpoints (Command Line)
+
+### Summarization:
+```bash
+curl -X POST -H "Content-Type: application/json" -d "{\"email_content\": \"Your long email content here...\"}" http://127.0.0.1:5000/summarize
+```
+
