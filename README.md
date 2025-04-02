@@ -137,3 +137,54 @@ Fetches a list of email IDs from the INBOX.
 ]
 ```
 
+### POST `/summarize`
+Generates a summary for the provided email content.
+
+**Request Body:**
+```json
+{
+  "email_content": "Your long email content here..."
+}
+```
+
+**Response Example:**
+```json
+{
+  "summary": "Concise summary text..."
+}
+```
+
+### POST `/categorize`
+Categorizes the email content using simple rule-based logic.
+
+**Request Body:**
+```json
+{
+  "email_content": "Let's schedule a meeting next week."
+}
+```
+
+**Response Example:**
+```json
+{
+  "category": "Work"
+}
+```
+
+### POST `/prioritize`
+Determines the email's priority based on the sender.
+
+**Request Body:**
+```json
+{
+  "sender": "boss@example.com"
+}
+```
+
+**Response Example:**
+```json
+{
+  "priority": "High"
+}
+```
+
