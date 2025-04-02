@@ -194,9 +194,8 @@ Determines the email's priority based on the sender.
 ```bash
 curl -X POST -H "Content-Type: application/json" -d "{\"email_content\": \"Your long email content here...\"}" http://127.0.0.1:5000/summarize
 ```
-
-### Categorization:
+### Prioritization:
 ```bash
-curl -X POST -H "Content-Type: application/json" -d "{\"email_content\": \"Let's schedule a meeting next week.\"}" http://127.0.0.1:5000/categorize
+curl -X POST -H "Content-Type: application/json" -d "{\"sender\": \"boss@example.com\"}" http://127.0.0.1:5000/prioritize
 ```
 
