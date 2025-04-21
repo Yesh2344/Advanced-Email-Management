@@ -241,4 +241,4 @@ CORS(app)
 
 ## Copyrights
 
-@YeswanthSoma 
+@YeswanthSoma All Copyrights Reserved
