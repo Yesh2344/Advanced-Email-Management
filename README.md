@@ -215,7 +215,20 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 ```
+## Future Enhancements
 
+- Expand email parsing to extract additional details (subject, sender, timestamp).
+- Improve the categorization and prioritization logic with advanced ML techniques.
+- Develop a more sophisticated frontend using modern JavaScript frameworks like React or Vue.js.
+- Add authentication and user management.
+- Implement email sending capabilities.
+- Create email thread visualization.
+
+## Troubleshooting
+
+- **IMAP Connection Issues:** Ensure your email provider allows IMAP access and that your credentials are correct.
+- **Dependency Issues:** Make sure all required packages are installed and compatible.
+- **CORS Errors:** Enable CORS in your Flask application as described above.
 
 ## Contributing
 
