@@ -13,11 +13,7 @@ The Advanced Email Management Application:
 
 ## Features Implemented
 
-### Day 1
-- **Basic Flask API Setup:**
-  - Created a Flask application with a foundational structure.
-- **Email Integration:**
-  - Implemented an `/emails` endpoint to connect to an IMAP server and fetch email IDs from the INBOX.
+
 
 ### Day 2
 - **Summarization Endpoint (`/summarize`):**
