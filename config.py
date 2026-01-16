@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 # Added comment
 
 # Optionally load variables from a .env file if you have one.
+# Added comment
 load_dotenv()
 
 EMAIL_HOST = os.environ.get('EMAIL_HOST', 'imap.gmail.com')
