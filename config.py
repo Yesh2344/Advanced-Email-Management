@@ -1,6 +1,7 @@
 # config.py
 import os
 from dotenv import load_dotenv
+# Added comment
 
 # Optionally load variables from a .env file if you have one.
 load_dotenv()
