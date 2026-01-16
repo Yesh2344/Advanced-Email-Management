@@ -107,6 +107,7 @@ def prioritize():
     important_contacts = ["boss@example.com", "ceo@example.com"]
     priority = "High" if sender in important_contacts else "Normal"
     
+# Added comment
     return jsonify({"priority": priority})
 
 if __name__ == '__main__':
